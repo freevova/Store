@@ -6,7 +6,7 @@ class StoreApplication
 			unless @instance
 				yield(self) 										# self - class: StoreApplication
 				puts "loading files..."
-				#puts self.class							# Class
+				#puts self	.class								# Class
 				require "pony"
 				require_relative 'string.rb'
 				require_relative 'item_container.rb'

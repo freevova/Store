@@ -4,9 +4,9 @@ class RealItem < Item
 
 	show_info_about :weight, lambda { |attr| attr > 5 }
 
-	def initialize(options)
+	def initialize(name, options)
 		@weight = options[:weight]
-		super(options[:name], options)
+		super
 	end
 	
 	def info

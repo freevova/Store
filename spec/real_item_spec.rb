@@ -6,8 +6,8 @@ require_relative '../app/virtual_item.rb'
 describe RealItem do
 
 	it "uses weight while returning info if the condition is true" do
-		item1 = RealItem.new(name: "kettle", price: 200, weight: 2)
-		item2 = RealItem.new(name: "kettle", price: 200, weight: 10)
+		item1 = RealItem.new("kettle", price: 200, weight: 2)
+		item2 = RealItem.new("kettle", price: 200, weight: 10)
 		item1_info = []
 		item2_info = []
 		item1.info { |attr| item1_info << attr }

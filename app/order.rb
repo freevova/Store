@@ -33,7 +33,7 @@ class Order
 			sleep(2)
 		end
 		send_email_at = Time.now
-		@time_spend_to_send_email = send_email_at - placed_at
+		@time_spend_to_send_email = send_email_at - @placed_at
 	end
 end
 

@@ -32,24 +32,24 @@ end
 
 @item = []
 @item << AntiqueItem.new( 'car', price: 101, weight: 2000)
-@item << RealItem.new( price: 100, name: 'kettle', weight: 50)
-@item << RealItem.new( price: 101, name: 'dishwasher', weight: 100)
+@item << RealItem.new( 'kettle', price: 100, weight: 50)
+@item << RealItem.new( 'dishwasher', price: 101, weight: 100)
 
 cart = Cart.new("vova")
-cart.add_item RealItem.new( price: 100, name: 'car', weight: 100)
-cart.add_item RealItem.new( price: 100, name: 'car', weight: 150)
-cart.add_item RealItem.new( price: 100, name: 'kettle', weight: 50)
+cart.add_item RealItem.new( 'car', price: 100, weight: 100)
+cart.add_item RealItem.new( 'car', price: 100, weight: 150)
+cart.add_item RealItem.new( 'kettle', price: 100, weight: 50)
 
-order = Order.new
-@item.each { |i| order.add_item(i) }
-order.place
-p order.placed_at.strftime("%b %-d, %Y %H:%M:%S") #Jan 18, 2016 17:00:00
-p order.time_spend_to_send_email
+# order = Order.new
+# @item.each { |i| order.add_item(i) }
+# order.place
+# p order.placed_at.strftime("%b %-d, %Y %H:%M:%S") #Jan 18, 2016 17:00:00
+# p order.time_spend_to_send_email
 
 
 # method = "all_cars"
 # p cart.send(method)
-
+# p cart.items
 
 
 
