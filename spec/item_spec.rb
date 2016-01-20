@@ -9,8 +9,8 @@ describe Item do
 	end
 
 	before(:all)   {}
-	after(:each)  {}
-	after(:all)      {}
+	after(:each)   {}
+	after(:all)    {}
 
 	it "calculates price according to a special formula" do
 		#item.price.should == 211
@@ -19,6 +19,10 @@ describe Item do
 
 	it "returns an info about an object" do
 		expect(@item.to_s) == "kettle:200"
+	end
+
+	it "calculates tax" do
+		expect(@item.send(:tax)).not_to be_nil
 	end
 	
 end

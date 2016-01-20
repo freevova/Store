@@ -26,7 +26,7 @@ module ItemContainer
 
 		def remove_item
 			@items.pop
-		end
+		end 
 
 		def remove_item
 			@items.pop

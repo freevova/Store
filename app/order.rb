@@ -10,6 +10,7 @@ class Order
 
 	def place
 		@placed_at = Time.now
+		# mock
 		thr = Thread.new do
 			Pony.mail({
 			  :to => StoreApplication::Admin.email,

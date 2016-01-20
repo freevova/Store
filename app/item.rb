@@ -9,6 +9,11 @@ class Item
 		end
 	end
 
+	def self.show_info_about(attr, block)
+		@@show_info_about ||= {}
+		@@show_info_about[attr] = block
+	end
+
 	attr_reader :real_price, :name
 	attr_writer  :real_price
 
